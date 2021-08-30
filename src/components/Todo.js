@@ -11,7 +11,8 @@ class Todo extends React.Component {
     render(){
         return(
             <div className='task_box'>
-              <button onClick={this.handleDoneClick}> {this.props.taskItem.task} </button>
+              <button onClick={this.handleDoneClick}
+                      className={`${this.props.taskItem.completed ? 'completed' : ''}`}> {this.props.taskItem.task} </button>
             </div>
         );
     }

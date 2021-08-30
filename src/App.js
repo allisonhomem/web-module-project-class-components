@@ -1,14 +1,14 @@
 import React from 'react';
 import TodoForm from './components/TodoForm.js';
 import TodoList from './components/TodoList.js';
-import Todo from './components/Todo.js';
+import './components/Todo.css';
 
 
-const todoTasks = [
-  {task: 'sample task',
-   id: 1,
-   completed: false}
-];
+const todoTasks = [{
+  task: 'make a to-do list',
+  id: 1,
+  completed: false
+}];
 
 class App extends React.Component {
   constructor() {
