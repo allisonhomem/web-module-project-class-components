@@ -2,13 +2,16 @@ import React from 'react';
 
 class Todo extends React.Component {
 
+    //function that crosses item off list when clicked by toggling boolean value by function passed through props
+    handleDoneClick = (event) => {
+       event.preventDefault();
+       this.props.handleDoneTasks(this.props.taskItem.id);
+    }
+
     render(){
         return(
-            <div>
-             <ul>
-               {this.props.todoItems.map((item) =>
-               <li>{item.task}</li>)}
-             </ul>
+            <div className='task_box'>
+              <button onClick={this.handleDoneClick}> {this.props.taskItem.task} </button>
             </div>
         );
     }
